@@ -7,8 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Hello new jsp file</h1>
-	<h2>i'm don</h2>
-	
+<%
+for(int i=0;i<5;i++)
+	out.write("<p>스크립트릿으로 작성한 html</p>\r\n");
+%>
 </body>
+<script type="text/javascript">
+	
+</script>
 </html>

@@ -7,8 +7,26 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Hello new jsp file</h1>
-	<h2>i'm don</h2>
-	
+<h1>scriptlet, out</h1>
+<%
+for (int i = 0; i< 5; i++ ){ 
+%>
+	<p>hello</p>
+<%
+}
+%>
+
+<hr>
+
+<%
+for(int i=0;i<5;i++){
+	out.println("<p>hello</p>");
+}
+%>
+<%--
+for(int i=0;i<5;i++){
+	<p>hello</p>;
+}
+--%>
 </body>
 </html>
