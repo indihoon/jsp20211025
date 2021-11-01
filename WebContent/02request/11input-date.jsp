@@ -19,7 +19,7 @@
 <%= request.getParameter("param1") %> <br>
 <%--getParameter는 string타입으로 파라미터를 갖고오는것 --%>
 <%
-// int a = request.getParameter("param2"); //xxx
+// int a = request.getParameter("param2"); //xxx getParameter는 String으로 가져온다
 String param2 = request.getParameter("param2"); 
 int a = Integer.parseInt(param2); // numberFormatException 
 
