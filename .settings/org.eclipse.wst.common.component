@@ -2,7 +2,7 @@
     <wb-module deploy-name="jsp20211025">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="jsp20211025"/>
         <property name="java-output-path" value="/jsp20211025/build/classes"/>
+        <property name="context-root" value="jsp1025"/>
     </wb-module>
 </project-modules>

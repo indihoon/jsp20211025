@@ -33,6 +33,6 @@ for (int i = 0; i < list.size(); i++) {
 <%
 }
 %>
-
+<!--replace해서 뭐가 바뀐건지  -->
 </body>
 </html>
