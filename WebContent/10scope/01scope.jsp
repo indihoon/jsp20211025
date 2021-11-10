@@ -11,25 +11,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>메인 페이지</h1>
-<%
-String user =  (String)session.getAttribute("user");
-if(user==null){
-	//로그인하지 않은 상태
-%>
-	<p>손님 반갑습니다</p>
-	<a href="10login-form.jsp">로그인</a>
-
-<%
-}else{
-	//로그인한 상태
-%>
-	<p><%=user %>님 반갑습니다</p>
-	<a href="#">로그아웃</a><!--없음  -->
-
-<%
-}
-%>
+<h1>java web app의 4개의 영역(scope)</h1>
+<ul>
+<li>page: 하나의 jsp 페이지(pageContext-PageContext(타입))</li>
+<li>request: 하나의 http요청(request-HttpServletRequest)</li>
+<li>session: 하나의 브라우저(session-HttpSession)</li>
+<li>application:하나의 웹 애플리케이션(application-ServletContext)</li>
+</ul>
 
 </body>
 </html>

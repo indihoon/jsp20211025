@@ -11,25 +11,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>메인 페이지</h1>
+<h1>회원목록</h1>
+<a href="06sign-form.jsp">등록하기</a>
 <%
-String user =  (String)session.getAttribute("user");
-if(user==null){
-	//로그인하지 않은 상태
+List<String> members=(List<String>)application.getAttribute("members");
+if(members !=null){
+	for(String member:members){
 %>
-	<p>손님 반갑습니다</p>
-	<a href="10login-form.jsp">로그인</a>
-
-<%
-}else{
-	//로그인한 상태
-%>
-	<p><%=user %>님 반갑습니다</p>
-	<a href="#">로그아웃</a><!--없음  -->
-
-<%
+	<li><%=member %></li>
+<%	
+	}
 }
-%>
 
+%>
 </body>
 </html>

@@ -4,11 +4,8 @@
 <% request.setCharacterEncoding("utf-8"); %>
 <link rel="stylesheet" href="<%= request.getContextPath() %>/resource/css/icon/css/all.css">
 
-<%
-//로그인 관련 작업
-String userid=request.getParameter("userid");
-session.setAttribute("user",userid);
-
-//main.jsp로 리디렉션
-response.sendRedirect("10main.jsp");
-%>
+<div>
+<h1>subpage</h1>
+<%=pageContext.getAttribute("pageAttr2") %>
+<!--다른페이지에서는 불가능  -->
+</div>

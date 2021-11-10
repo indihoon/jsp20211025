@@ -11,25 +11,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>메인 페이지</h1>
-<%
-String user =  (String)session.getAttribute("user");
-if(user==null){
-	//로그인하지 않은 상태
-%>
-	<p>손님 반갑습니다</p>
-	<a href="10login-form.jsp">로그인</a>
-
-<%
-}else{
-	//로그인한 상태
-%>
-	<p><%=user %>님 반갑습니다</p>
-	<a href="#">로그아웃</a><!--없음  -->
-
-<%
-}
-%>
-
+<form action="06signup-process.jsp" method=post>
+	<!-- (input+br)*3+input:s -->
+	<input type="text" name="userName"placeholder="이름" />
+	<br />
+	<input type="submit" value="등록" />	
+</form>
 </body>
 </html>

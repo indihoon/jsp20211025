@@ -4,11 +4,17 @@
 <% request.setCharacterEncoding("utf-8"); %>
 <link rel="stylesheet" href="<%= request.getContextPath() %>/resource/css/icon/css/all.css">
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>쿠키 추가</h1>
 <%
-//로그인 관련 작업
-String userid=request.getParameter("userid");
-session.setAttribute("user",userid);
-
-//main.jsp로 리디렉션
-response.sendRedirect("10main.jsp");
+Cookie cookie =new Cookie("remove-cookie","remove-value");
+response.addCookie(cookie);
 %>
+</body>
+</html>

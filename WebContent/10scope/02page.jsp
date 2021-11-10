@@ -11,25 +11,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>메인 페이지</h1>
+<h1>page영역</h1>
 <%
-String user =  (String)session.getAttribute("user");
-if(user==null){
-	//로그인하지 않은 상태
+pageContext.setAttribute("pageAttr1","pageVal1");
 %>
-	<p>손님 반갑습니다</p>
-	<a href="10login-form.jsp">로그인</a>
-
 <%
-}else{
-	//로그인한 상태
+String attr1= (String)pageContext.getAttribute("pageAttr1");
 %>
-	<p><%=user %>님 반갑습니다</p>
-	<a href="#">로그아웃</a><!--없음  -->
-
-<%
-}
-%>
+<%=attr1 %>
+<!--한페이지 내에서 사용  -->
 
 </body>
 </html>

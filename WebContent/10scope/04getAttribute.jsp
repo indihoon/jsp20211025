@@ -4,11 +4,14 @@
 <% request.setCharacterEncoding("utf-8"); %>
 <link rel="stylesheet" href="<%= request.getContextPath() %>/resource/css/icon/css/all.css">
 
-<%
-//로그인 관련 작업
-String userid=request.getParameter("userid");
-session.setAttribute("user",userid);
-
-//main.jsp로 리디렉션
-response.sendRedirect("10main.jsp");
-%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>application getAttribute</h1>
+<%= application.getAttribute("appAttr1") %>
+</body>
+</html>

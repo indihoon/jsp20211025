@@ -11,25 +11,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>메인 페이지</h1>
+<h1>쿠키 추가 예제</h1>
 <%
-String user =  (String)session.getAttribute("user");
-if(user==null){
-	//로그인하지 않은 상태
-%>
-	<p>손님 반갑습니다</p>
-	<a href="10login-form.jsp">로그인</a>
+//새 쿠키를 추가하는 코드
+//쿠키 이름: my-new-cookie
+//쿠키값: my-new-cookie-value
+//유효시간:1시간
 
-<%
-}else{
-	//로그인한 상태
-%>
-	<p><%=user %>님 반갑습니다</p>
-	<a href="#">로그아웃</a><!--없음  -->
+Cookie cookie = new Cookie("my-new-cookie","my-new-cookie-value");
+cookie.setMaxAge(3600);
 
-<%
-}
+response.addCookie(cookie);
+/*쿠키를 특정 경로 도메인 자바스크립트로만 들고오도록하는등의 기능 가능  */
 %>
-
 </body>
 </html>

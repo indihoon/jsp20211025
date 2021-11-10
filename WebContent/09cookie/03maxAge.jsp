@@ -11,25 +11,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>메인 페이지</h1>
+<!--쿠키만들때 쿠키의 유효시간 명시 가능  -->
+<h1>쿠키 추가,유효시간 설정</h1>
 <%
-String user =  (String)session.getAttribute("user");
-if(user==null){
-	//로그인하지 않은 상태
-%>
-	<p>손님 반갑습니다</p>
-	<a href="10login-form.jsp">로그인</a>
+Cookie cookie = new Cookie("long-age-cookie","cookie-value1");
 
-<%
-}else{
-	//로그인한 상태
+cookie.setMaxAge(60);//초단위
+response.addCookie(cookie);
+/*브라우저 종료해도 60초 이내라면 쿠키에 남아있다  */
+/*톰캣의 쿠키는 종료시 사라진다  */
 %>
-	<p><%=user %>님 반갑습니다</p>
-	<a href="#">로그아웃</a><!--없음  -->
-
-<%
-}
-%>
-
 </body>
 </html>

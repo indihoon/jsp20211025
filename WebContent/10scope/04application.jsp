@@ -11,25 +11,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>메인 페이지</h1>
+<h1>application</h1>
+<!--이프로젝트 안에서 사용하는 모든 jsp 서블릿에 공통으로 사용하는 객체  -->
 <%
-String user =  (String)session.getAttribute("user");
-if(user==null){
-	//로그인하지 않은 상태
+application.setAttribute("appAttr1", "appVal1");
 %>
-	<p>손님 반갑습니다</p>
-	<a href="10login-form.jsp">로그인</a>
-
-<%
-}else{
-	//로그인한 상태
-%>
-	<p><%=user %>님 반갑습니다</p>
-	<a href="#">로그아웃</a><!--없음  -->
-
-<%
-}
-%>
-
 </body>
 </html>
