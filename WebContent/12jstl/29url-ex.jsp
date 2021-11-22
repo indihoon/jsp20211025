@@ -12,21 +12,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>choose</h1>
-<c:choose>
-<c:when test="${param.age<=10 }">
-<p>어린이용</p>
-</c:when>
-<c:when test="${param.age<=20 }">
-<p>청소년용</p>
-</c:when >
-<c:when test="${pram.age>20 }">
-<p>성인용</p>
-</c:when>
-<c:otherwise>
-	<p>입력되지 않았습니다</p>
-</c:otherwise>
-<!-- 위에부터 조건 하나라도 t면 choose태그 빠져나감 -->
-</c:choose>
+<c:url value="25process.jsp" var="addEx">
+	<c:param name="title" value="wah"></c:param>
+	<c:param name="price" value="200"></c:param>
+	<c:param name="writer" value="ina"></c:param>
+	<c:param name="publisher" value="me"></c:param>
+	<c:param name="stock" value="74"></c:param>
+</c:url>
+<a href="${addEx }"></a>
 </body>
 </html>

@@ -12,21 +12,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>choose</h1>
-<c:choose>
-<c:when test="${param.age<=10 }">
-<p>어린이용</p>
-</c:when>
-<c:when test="${param.age<=20 }">
-<p>청소년용</p>
-</c:when >
-<c:when test="${pram.age>20 }">
-<p>성인용</p>
-</c:when>
-<c:otherwise>
-	<p>입력되지 않았습니다</p>
-</c:otherwise>
-<!-- 위에부터 조건 하나라도 t면 choose태그 빠져나감 -->
-</c:choose>
+<c:set var="attr1" value="veru looooooooooooooong value"></c:set>
+${attr1 }
+<br />
+<c:set var="attr2">very loooooooooooooong value</c:set>
+${attr2 }
 </body>
 </html>
